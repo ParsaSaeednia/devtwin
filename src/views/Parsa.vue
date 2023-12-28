@@ -7,8 +7,7 @@
                     <span>Back Home</span>
                 </router-link>
                 <p>
-                    PARHAM IS AND IS A FORMER SPEED CUBER AND FORMER ISIS MEMBER
-                    HE HAS FUCKED MANY BITHCES ON TABLE
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus eos iure veniam! Natus, sunt illo?
                 </p>
                 <h3>
                     Technologies:
