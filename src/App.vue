@@ -5,22 +5,22 @@ import Navbar from "./components/Navbar.vue";
 
 <template>
   <Navbar />
-  <router-view />
+  <router-view v-slot="{ Component }">
+    <transition name="fade" mode="out-in">
+      <component :is="Component" />
+    </transition>
+  </router-view>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-out;
 
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
 }
 </style>
