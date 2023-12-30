@@ -1,3 +1,4 @@
+
 <template>
     <div>
         <main>
@@ -6,26 +7,43 @@
             </div>
             <section>
                 <router-link to="/">
-                    <span>Back Home</span>
+                    <span>
+                        &lt;&lt;back home
+                    </span>
                 </router-link>
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus eos iure veniam! Natus, sunt illo?
+                    Seasoned Backend Engineer adept at designing and implementing <b>scalable</b> server
+                    <b>architectures</b>. Skilled in
+                    <b>Node JS</b>, database management, and <b>API development</b> to ensure optimal <b>performance</b> and
+                    reliability. A
+                    results-oriented professional committed to delivering efficient backend solutions for complex
+                    applications.
 
                 </p>
                 <h3>
                     Technologies:
                 </h3>
                 <h6>Nest.js</h6>
-                <h3>Projects:</h3>
-                <h6>x.com</h6>
-                <h6>y.com</h6>
+                <h6>Docker</h6>
+                <h6>Git</h6>
+                <h6>Microservices</h6>
+                <h3>Full CV:</h3>
+                <a href="https://drive.google.com/file/d/1F0Vn0zva4I8LZ-LyWb1KmxEd4PY38lEH/view" class="button"
+                    target="_blank">Download</a>
+
             </section>
         </main>
         <footer>
             <ul>
-                <li>Github</li>
-                <li>Linekdin</li>
-                <li>Email</li>
+                <a href="https://github.com/parhamsaeednia" target="_blank">
+                    <li>Github</li>
+                </a>
+                <a href="https://www.linkedin.com/in/parham-saeednia-a88a30196/" target="_blank">
+                    <li>linkedin</li>
+                </a>
+                <a href="mailto:saeedniaparham@gmail.com" target="_blank">
+                    <li>mail</li>
+                </a>
             </ul>
         </footer>
     </div>
@@ -39,7 +57,6 @@ div {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border-right: 2px dashed #212121;
 }
 
 main {
@@ -57,20 +74,29 @@ main {
 }
 
 section {
+    margin-top: 7em;
     padding-left: 67px;
     display: flex;
     flex-direction: column;
-}
+    border-left: 2px dashed #212121;
 
-span:hover {
-    font-weight: 500;
-    cursor: pointer;
 }
 
 p {
-    margin: 1em 0;
+    text-align: justify;
+}
+
+span {
+    line-height: 4em;
+    font-weight: 500;
 
 }
+
+span:hover {
+    cursor: pointer;
+}
+
+
 
 h3 {
     font-size: 26px;
@@ -80,6 +106,20 @@ h3 {
 
 h6 {
     font-size: 16px;
+}
+
+a.button {
+    border: 0;
+    background-color: #fafafa;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-transform: uppercase;
+    width: fit-content;
+    font-weight: 500;
 }
 
 footer {

@@ -4,18 +4,27 @@
 
             <section>
                 <router-link to="/">
-                    <span>Back Home</span>
+                    <span> &lt;&lt;
+                        Back Home</span>
                 </router-link>
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus eos iure veniam! Natus, sunt illo?
-                </p>
+                    Results-driven Frontend Engineer with a passion for crafting
+                    seamless user interfaces for <b>+3 years</b>. Proficient in modern web
+                    technologies Such as <b>Next.js</b> and <b>Vue.js</b> to obtain the best looking
+                    platforms while maintaining the fastest performance </p>
                 <h3>
                     Technologies:
                 </h3>
-                <h6>Nest.js</h6>
-                <h3>Projects:</h3>
-                <h6>x.com</h6>
-                <h6>y.com</h6>
+                <h6>Vue.js</h6>
+                <h6>Next.js</h6>
+                <h6>Typescript</h6>
+                <h6>TailwindCSS</h6>
+                <h6>Git</h6>
+                <h3>Full CV:</h3>
+
+                <a href="https://drive.google.com/file/d/18Non0EQMudMNAiYlLzJ44SsZbErUhOI_/view" class="button"
+                    target="_blank">Download</a>
+
             </section>
             <div class="image-container">
                 <img src="https://picsum.photos/254/294" alt="PARHAM">
@@ -23,9 +32,15 @@
         </main>
         <footer>
             <ul>
-                <li>Github</li>
-                <li>Linekdin</li>
-                <li>Email</li>
+                <a href="https://github.com/parsasaeednia" target="_blank">
+                    <li>Github</li>
+                </a>
+                <a href="https://www.linkedin.com/in/parsa-saeednia-5a11a6174/" target="_blank">
+                    <li>linkedin</li>
+                </a>
+                <a href="mailto:p.parsa31@gmail.com" target="_blank">
+                    <li>mail</li>
+                </a>
             </ul>
         </footer>
     </div>
@@ -39,7 +54,6 @@ div {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border-left: 2px dashed #212121;
 }
 
 main {
@@ -57,29 +71,48 @@ main {
 }
 
 section {
-    padding-right: 67px;
+    margin-top: 7em;
+    padding-left: 67px;
     display: flex;
     flex-direction: column;
+    border-right: 2px dashed #212121;
+
 }
 
-span:hover {
+span {
+    line-height: 2em;
     font-weight: 500;
-    cursor: pointer;
+
 }
 
 p {
-    margin: 1em 0;
+    margin: 1em 2em 1em 0;
+    text-align: justify;
 
 }
 
 h3 {
     font-size: 26px;
     font-weight: 200;
-    margin: 1em 0;
+    margin: 0.5em 0;
 }
 
 h6 {
     font-size: 16px;
+}
+
+a.button {
+    border: 0;
+    background-color: #fafafa;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-transform: uppercase;
+    width: fit-content;
+    font-weight: 500;
 }
 
 footer {
