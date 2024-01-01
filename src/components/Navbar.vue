@@ -181,4 +181,101 @@ h3 {
 .router-link-active h3 {
     display: none;
 }
+
+@media screen and (max-width:1024px) {
+    nav {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+
+    .parham-container:hover h1,
+    .parham-container:hover h3 {
+        transition: none;
+        /* Your hover styles here, example: */
+        color: #212121;
+        /* Changes text color on hover */
+        cursor: pointer;
+        /* Changes the cursor to a pointer to indicate it's clickable */
+    }
+
+    .parham-container h1,
+    .parham-container h3 {
+        transition: none;
+        /* Smooth transition for color change */
+    }
+
+
+    .parham-hover-line {
+        position: relative;
+        /* Default padding */
+        /* Required for the absolute positioning of the pseudo-element */
+        transition: none;
+        /* Transition for both padding and color */
+    }
+
+
+    .parham-hover-line::before {
+
+        transition: none;
+    }
+
+    .parham-container:hover .parham-hover-line::before {
+        width: 0%;
+        /* Full width on hover */
+    }
+
+
+    .parham-container:hover .parham-hover-line {
+        padding-left: 0
+            /* Adjust space as need on hover */
+    }
+
+    .parsa-container:hover h1,
+    .parsa-container:hover h3 {
+        transition: none;
+        /* Your hover styles here, example: */
+        color: #212121;
+        /* Changes text color on hover */
+        cursor: pointer;
+        /* Changes the cursor to a pointer to indicate it's clickable */
+    }
+
+    .parsa-container h1,
+    .parsa-container h3 {
+        transition: none;
+        /* Smooth transition for color change */
+    }
+
+
+    .parsa-hover-line {
+        position: relative;
+        /* Default padding */
+        /* Required for the absolute positioning of the pseudo-element */
+        transition: none;
+        /* Transition for both padding and color */
+    }
+
+
+    .parsa-hover-line::before {
+
+        transition: none;
+    }
+
+    .parsa-container:hover .parsa-hover-line::before {
+        width: 0%;
+        /* Full width on hover */
+    }
+
+
+    .parsa-container:hover .parsa-hover-line {
+        padding-left: 0
+            /* Adjust space as need on hover */
+    }
+
+}
 </style>

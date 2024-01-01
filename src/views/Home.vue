@@ -30,4 +30,12 @@ p {
 span {
     font-weight: bold;
 }
+
+@media screen and (max-width:1024px) {
+    main {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
+}
 </style>

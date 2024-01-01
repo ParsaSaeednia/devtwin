@@ -147,4 +147,39 @@ li:hover {
     font-weight: 500;
     cursor: pointer;
 }
+
+@media screen and (max-width:1024px) {
+    img {
+        width: 100px;
+    }
+
+    .image-container {
+        display: none;
+    }
+
+    main {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
+    section {
+        padding-left: 1em;
+    }
+
+    span {
+        font-size: small;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    h6 {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+}
 </style>
