@@ -2,9 +2,9 @@
 <template>
     <div>
         <main>
-            <div class="image-container">
+            <!-- <div class="image-container">
                 <img src="https://picsum.photos/254/294" alt="PARHAM">
-            </div>
+            </div> -->
             <section>
                 <router-link to="/">
                     <span>
@@ -109,7 +109,8 @@ h6 {
 }
 
 a.button {
-    border: 0;
+    border: 1px solid #212121;
+    padding: 6px;
     background-color: #fafafa;
     cursor: pointer;
     font-family: "Montserrat", sans-serif;
@@ -180,6 +181,10 @@ li:hover {
 
     p {
         font-size: 12px;
+    }
+
+    a.button {
+        font-size: small;
     }
 }
 </style>

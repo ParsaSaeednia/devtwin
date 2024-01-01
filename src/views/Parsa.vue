@@ -26,9 +26,9 @@
                     target="_blank">Download</a>
 
             </section>
-            <div class="image-container">
+            <!-- <div class="image-container">
                 <img src="https://picsum.photos/254/294" alt="PARHAM">
-            </div>
+            </div> -->
         </main>
         <footer>
             <ul>
@@ -102,7 +102,8 @@ h6 {
 }
 
 a.button {
-    border: 0;
+    border: 1px solid #212121;
+    padding: 6px;
     background-color: #fafafa;
     cursor: pointer;
     font-family: "Montserrat", sans-serif;
@@ -173,6 +174,10 @@ li:hover {
 
     p {
         font-size: 12px;
+    }
+
+    a.button {
+        font-size: small;
     }
 }
 </style>
