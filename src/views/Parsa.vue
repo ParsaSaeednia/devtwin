@@ -24,7 +24,7 @@
                 <!-- 
                 <a href="https://drive.google.com/file/d/18Non0EQMudMNAiYlLzJ44SsZbErUhOI_/view" class="button"
                     target="_blank">Download</a> -->
-                <a href="../../public/ParsaSaeednia.pdf" class="button" target="_blank">Download</a>
+                <a href="../../ParsaSaeednia.pdf" class="button" target="_blank">Download</a>
 
 
             </section>
