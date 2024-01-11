@@ -28,8 +28,10 @@
                 <h6>Git</h6>
                 <h6>Microservices</h6>
                 <h3>Full CV:</h3>
-                <a href="https://drive.google.com/file/d/1F0Vn0zva4I8LZ-LyWb1KmxEd4PY38lEH/view" class="button"
-                    target="_blank">Download</a>
+                <!-- <a href="https://drive.google.com/file/d/1F0Vn0zva4I8LZ-LyWb1KmxEd4PY38lEH/view" class="button"
+                    target="_blank">Download</a> -->
+                <a href="../../public/ParhamSaeednia.pdf" class="button" target="_blank">Download</a>
+
 
             </section>
         </main>

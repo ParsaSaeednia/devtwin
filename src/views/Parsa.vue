@@ -21,9 +21,11 @@
                 <h6>TailwindCSS</h6>
                 <h6>Git</h6>
                 <h3>Full CV:</h3>
-
+                <!-- 
                 <a href="https://drive.google.com/file/d/18Non0EQMudMNAiYlLzJ44SsZbErUhOI_/view" class="button"
-                    target="_blank">Download</a>
+                    target="_blank">Download</a> -->
+                <a href="../../public/ParsaSaeednia.pdf" class="button" target="_blank">Download</a>
+
 
             </section>
             <!-- <div class="image-container">
