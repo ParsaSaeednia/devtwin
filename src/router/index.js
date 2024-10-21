@@ -5,26 +5,26 @@ import Parsa from "../views/Parsa.vue";
 import Parham from "../views/Parham.vue";
 
 const routes = [
-	{
-		path: "/",
-		name: "Home",
-		component: Home,
-	},
-	{
-		path: "/Parsa",
-		name: "Parsa",
-		component: Parsa,
-	},
-	{
-		path: "/Parham",
-		name: "Parham",
-		component: Parham,
-	},
+  {
+    path: "/",
+    name: "Home",
+    component: Home,
+  },
+  {
+    path: "/Parsa",
+    name: "Parsa",
+    component: Parsa,
+  },
+  {
+    path: "/Parham",
+    name: "Parham",
+    component: Parham,
+  },
 ];
 
 const router = createRouter({
-	history: createWebHistory(),
-	routes,
+  history: createWebHistory(),
+  routes,
 });
 
 export default router;

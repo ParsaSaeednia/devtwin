@@ -18,7 +18,10 @@ body {
 	max-height: 100dvh;
 	text-transform: uppercase;
 }
+
 a {
-	color: inherit; /* blue colors for links too */
-	text-decoration: inherit; /* no underline */
+	color: inherit;
+	/* blue colors for links too */
+	text-decoration: inherit;
+	/* no underline */
 }
