@@ -1,5 +1,6 @@
 <script setup>
   import Navbar from "./components/Navbar.vue";
+  import Arcaptcha from "./components/Arcaptcha.vue";
 </script>
 
 <template>
@@ -12,6 +13,7 @@
       <component :is="Component" />
     </transition>
   </router-view>
+  <Arcaptcha site_key="of3fqwsxwd"> </Arcaptcha>
 </template>
 
 <style scoped>

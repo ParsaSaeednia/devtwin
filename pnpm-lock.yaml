@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      arcaptcha-vue3:
+        specifier: ^0.4.0
+        version: 0.4.0(vue@3.5.12)
       vue:
         specifier: ^3.5.12
         version: 3.5.12
@@ -304,6 +307,11 @@ packages:
   '@vue/shared@3.5.12':
     resolution: {integrity: sha512-L2RPSAwUFbgZH20etwrXyVyCBu9OxRSi8T/38QsvnkJyvq2LufW2lDCOzm7t/U9C1mkhJGWYfCuFBCmIuNivrg==}
 
+  arcaptcha-vue3@0.4.0:
+    resolution: {integrity: sha512-EY8VlTfEoPuWMVh0tduDyQv/Rqgbkfnn92Zio76Qi1OOt4pFLY/2Qvoa+VY2/Ipp5u4NCl1cXBApy5sBZSxjBQ==}
+    peerDependencies:
+      vue: ^3.3.4
+
   csstype@3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
 
@@ -593,6 +601,10 @@ snapshots:
       vue: 3.5.12
 
   '@vue/shared@3.5.12': {}
+
+  arcaptcha-vue3@0.4.0(vue@3.5.12):
+    dependencies:
+      vue: 3.5.12
 
   csstype@3.1.3: {}
 
