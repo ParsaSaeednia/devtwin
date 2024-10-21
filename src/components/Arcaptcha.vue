@@ -8,7 +8,7 @@
         default: "https://widget.arcaptcha.ir/1/api.js",
       },
       invisible: {
-        default: false,
+        default: true,
       },
       callback: {
         default: false,
