@@ -8,7 +8,7 @@
         default: "https://widget.arcaptcha.ir/1/api.js",
       },
       invisible: {
-        default: true,
+        default: false,
       },
       callback: {
         default: false,
@@ -41,7 +41,7 @@
       },
       theme: {
         type: String,
-        default: "light",
+        default: "dark",
       },
     },
     data() {
