@@ -1,27 +1,22 @@
 <template>
-  <main>
+  <main class="container home">
     <p>We are <span>Backend</span> & <span>Frontend</span> Developers with Exprience developing web-based platforms</p>
   </main>
 </template>
 
 <style scoped>
-  main {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-height: 70vh;
-    padding: 46px 208px;
+  .home {
+    display: grid;
+    min-height: 60vh;
+    align-content: end;
+    padding-block: clamp(24px, 6vh, 64px);
   }
 
   p {
-    position: absolute;
-    bottom: 0;
     color: var(--color-21, #212121);
-    /* Helvetica Neue/26px: Light */
-    font-size: 26px;
+    font-size: clamp(18px, 2.2vw, 26px);
     font-style: normal;
     font-weight: 300;
-    line-height: normal;
   }
 
   span {
@@ -29,9 +24,5 @@
   }
 
   @media screen and (max-width: 1024px) {
-    main {
-      padding-left: 3em;
-      padding-right: 3em;
-    }
   }
 </style>

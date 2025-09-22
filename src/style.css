@@ -6,6 +6,9 @@
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	--container-max: 1200px;
+	--gutter: clamp(16px, 4vw, 48px);
+	--nav-space: clamp(72px, 12vh, 160px);
 }
 
 * {
@@ -15,13 +18,37 @@
 }
 
 body {
-	max-height: 100dvh;
+	min-height: 100dvh;
 	text-transform: uppercase;
+	padding-top: var(--nav-space);
 }
 
 a {
 	color: inherit;
-	/* blue colors for links too */
 	text-decoration: inherit;
-	/* no underline */
+}
+
+.container {
+	max-width: var(--container-max);
+	width: 100%;
+	margin-inline: auto;
+	padding-inline: var(--gutter);
+}
+
+img,
+video,
+svg {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+h1,
+h2,
+h3 {
+	line-height: 1.2;
+}
+
+p {
+	line-height: 1.6;
 }
