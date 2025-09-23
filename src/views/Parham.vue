@@ -1,6 +1,7 @@
 <template>
   <div>
     <main class="container profile">
+      <h1 class="visually-hidden">Parham Saeednia – Backend Engineer</h1>
       <section>
         <router-link to="/">
           <span> &lt;&lt;back home </span>
@@ -161,5 +162,14 @@
     a.button {
       font-size: small;
     }
+  }
+
+  .visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
   }
 </style>

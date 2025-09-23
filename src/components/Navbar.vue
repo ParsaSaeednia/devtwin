@@ -6,8 +6,8 @@
         to="/Parham"
       >
         <div>
-          <h1>Parham</h1>
-          <h3 class="parham-hover-line">Go through</h3>
+          <span class="nav-title">Parham</span>
+          <span class="nav-sub parham-hover-line">Go through</span>
         </div>
       </router-link>
 
@@ -16,8 +16,8 @@
         to="/Parsa"
       >
         <div>
-          <h1>Parsa</h1>
-          <h3 class="parsa-hover-line">Go through</h3>
+          <span class="nav-title">Parsa</span>
+          <span class="nav-sub parsa-hover-line">Go through</span>
         </div>
       </router-link>
     </div>
@@ -43,32 +43,34 @@
     padding-block: clamp(16px, 3vw, 32px);
   }
 
-  h1 {
+  .nav-title {
     font-size: clamp(24px, 6vw, 68px);
     font-weight: 200;
     line-height: 1.1;
     color: #606060;
+    display: block;
   }
 
-  h3 {
+  .nav-sub {
     font-size: clamp(12px, 2.2vw, 16px);
     font-weight: 300;
     line-height: 1.2;
+    display: block;
   }
   .parham-container {
     position: relative;
     overflow: hidden;
   }
 
-  .parham-container:hover h1,
-  .parham-container:hover h3 {
+  .parham-container:hover .nav-title,
+  .parham-container:hover .nav-sub {
     transition: 1s ease;
     color: #212121;
     cursor: pointer;
   }
 
-  .parham-container h1,
-  .parham-container h3 {
+  .parham-container .nav-title,
+  .parham-container .nav-sub {
     transition: color 1s ease, padding-left 1s ease;
   }
 
@@ -138,11 +140,11 @@
     padding-left: 7.1em;
   }
 
-  .router-link-active h1 {
+  .router-link-active .nav-title {
     color: #212121;
   }
 
-  .router-link-active h3 {
+  .router-link-active .nav-sub {
     display: none;
   }
 
