@@ -31,7 +31,7 @@
     left: 0;
     width: 100%;
     z-index: 9;
-    background: #fafafa;
+    background: transparent;
     border-bottom: 2px dashed #212121;
   }
 

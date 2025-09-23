@@ -62,7 +62,7 @@
     grid-template-columns: 1fr;
     gap: clamp(16px, 3vw, 32px);
     padding-block: 0;
-    background: #fafafa;
+    background: transparent;
     z-index: 2;
   }
 
@@ -121,7 +121,7 @@
     bottom: 0;
     z-index: 9;
     height: 64px;
-    background: #fafafa;
+    background: transparent;
   }
 
   ul {
