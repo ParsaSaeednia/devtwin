@@ -22,6 +22,7 @@
           href="../../ParsaSaeednia.pdf"
           class="button"
           target="_blank"
+          rel="noopener"
           >Download</a
         >
       </section>
@@ -31,18 +32,21 @@
         <a
           href="https://github.com/parsasaeednia"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <li>Github</li>
         </a>
         <a
           href="https://www.linkedin.com/in/parsa-saeednia-5a11a6174/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <li>linkedin</li>
         </a>
         <a
           href="mailto:p.parsa31@gmail.com"
           target="_blank"
+          rel="noopener"
         >
           <li>mail</li>
         </a>

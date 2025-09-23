@@ -21,6 +21,7 @@
           href="../../ParhamSaeednia.pdf"
           class="button"
           target="_blank"
+          rel="noopener"
           >Download</a
         >
       </section>
@@ -30,18 +31,21 @@
         <a
           href="https://github.com/parhamsaeednia"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <li>Github</li>
         </a>
         <a
           href="https://www.linkedin.com/in/parham-saeednia-a88a30196/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <li>linkedin</li>
         </a>
         <a
           href="mailto:saeedniaparham@gmail.com"
           target="_blank"
+          rel="noopener"
         >
           <li>mail</li>
         </a>
