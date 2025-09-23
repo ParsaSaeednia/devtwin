@@ -11,6 +11,7 @@
     min-height: 60vh;
     align-content: end;
     padding-block: clamp(24px, 6vh, 64px);
+    background: transparent;
   }
 
   p {
