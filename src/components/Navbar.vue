@@ -56,6 +56,7 @@
     font-weight: 300;
     line-height: 1.2;
     display: block;
+    transition: color 1s ease, padding-left 1s ease, opacity 0.4s ease;
   }
   .parham-container {
     position: relative;
@@ -71,7 +72,7 @@
 
   .parham-container .nav-title,
   .parham-container .nav-sub {
-    transition: color 1s ease, padding-left 1s ease;
+    transition: color 1s ease, padding-left 1s ease, opacity 0.4s ease;
   }
 
   .parham-hover-line {
@@ -103,16 +104,16 @@
     overflow: hidden;
   }
 
-  .parsa-container:hover h1,
-  .parsa-container:hover h3 {
+  .parsa-container:hover .nav-title,
+  .parsa-container:hover .nav-sub {
     transition: 1s ease;
     color: #212121;
     cursor: pointer;
   }
 
-  .parsa-container h1,
-  .parsa-container h3 {
-    transition: color 1s ease, padding-left 1s ease;
+  .parsa-container .nav-title,
+  .parsa-container .nav-sub {
+    transition: color 1s ease, padding-left 1s ease, opacity 0.4s ease;
   }
 
   .parsa-hover-line {
@@ -149,19 +150,15 @@
   }
 
   @media screen and (max-width: 1024px) {
-    h1 {
-      font-size: 20px;
-    }
-
-    .parham-container:hover h1,
-    .parham-container:hover h3 {
+    .parham-container:hover .nav-title,
+    .parham-container:hover .nav-sub {
       transition: none;
       color: #212121;
       cursor: pointer;
     }
 
-    .parham-container h1,
-    .parham-container h3 {
+    .parham-container .nav-title,
+    .parham-container .nav-sub {
       transition: none;
     }
 
@@ -182,15 +179,15 @@
       padding-left: 0;
     }
 
-    .parsa-container:hover h1,
-    .parsa-container:hover h3 {
+    .parsa-container:hover .nav-title,
+    .parsa-container:hover .nav-sub {
       transition: none;
       color: #212121;
       cursor: pointer;
     }
 
-    .parsa-container h1,
-    .parsa-container h3 {
+    .parsa-container .nav-title,
+    .parsa-container .nav-sub {
       transition: none;
     }
 
