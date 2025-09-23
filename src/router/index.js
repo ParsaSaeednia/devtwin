@@ -64,6 +64,43 @@ router.afterEach((to) => {
     }
     link.setAttribute("href", meta.canonical);
   }
+
+  // JSON-LD structured data
+  // Remove old
+  document.querySelectorAll('script[type="application/ld+json"]').forEach((n) => n.remove());
+  // Add Organization
+  const addLd = (data) => {
+    const s = document.createElement("script");
+    s.type = "application/ld+json";
+    s.text = JSON.stringify(data);
+    document.head.appendChild(s);
+  };
+  addLd({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "DevTw.in",
+    url: meta.canonical || "https://devtw.in/",
+    logo: "https://devtw.in/logo.jpg",
+  });
+  if (to.name === "Parsa") {
+    addLd({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Parsa Saeednia",
+      jobTitle: "Frontend Engineer",
+      url: "https://devtw.in/Parsa",
+      sameAs: ["https://github.com/parsasaeednia", "https://www.linkedin.com/in/parsa-saeednia-5a11a6174/"],
+    });
+  } else if (to.name === "Parham") {
+    addLd({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Parham Saeednia",
+      jobTitle: "Backend Engineer",
+      url: "https://devtw.in/Parham",
+      sameAs: ["https://github.com/parhamsaeednia", "https://www.linkedin.com/in/parham-saeednia-a88a30196/"],
+    });
+  }
 });
 
 export default router;
