@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title>404 - Redirecting…</title>
+    <meta
+      http-equiv="refresh"
+      content="0;url=/?redirect=%2F"
+    />
+    <script>
+      (function () {
+        var l = window.location;
+        var redirect = "/?redirect=" + encodeURIComponent(l.pathname + l.search + l.hash);
+        document.querySelector('meta[http-equiv="refresh"]').setAttribute("content", "0;url=" + redirect);
+        l.replace(redirect);
+      })();
+    </script>
+  </head>
+  <body>
+    Redirecting…
+  </body>
+</html>
