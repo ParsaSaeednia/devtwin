@@ -145,7 +145,7 @@
   }
 
   .router-link-active .nav-sub {
-    display: none;
+    opacity: 0;
   }
 
   @media screen and (max-width: 1024px) {
