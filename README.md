@@ -10,7 +10,7 @@ Live Demo: [devtwin.ir](https://devtwin.ir/)
 |---------------|-------------------------------|
 | Frontend      | Vue.js (CompositionApi) |
 | Bundler / Dev | Vite                           |
-| Styling       | Tailwind |
+| Styling       | Pure CSS |
 | Hosting        | Netlify |
 ---
 ## 🚀 Getting Started
