@@ -7,13 +7,13 @@
           <span> &lt;&lt; Back Home</span>
         </router-link>
         <p>
-          Results-driven Frontend Engineer with a passion for crafting seamless user interfaces for <b>+3 years</b>. Proficient in
-          modern web technologies Such as <b>Next.js</b> and <b>Vue.js</b> to obtain the best looking platforms while maintaining
+          Results-driven Frontend Engineer with a passion for crafting seamless user interfaces for <b>+4 years</b>. Proficient in
+          modern web technologies Such as <b>Vue.JS</b> & <b>ReactJS</b> to obtain the best looking platforms while maintaining
           the fastest performance
         </p>
         <h3>Technologies:</h3>
         <h6>Vue.js</h6>
-        <h6>Next.js</h6>
+        <h6>Nex t.js</h6>
         <h6>Typescript</h6>
         <h6>TailwindCSS</h6>
         <h6>Git</h6>
