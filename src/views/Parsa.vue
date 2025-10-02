@@ -65,7 +65,7 @@
     display: grid;
     align-items: center;
     grid-template-columns: 1fr;
-    gap: clamp(16px, 3vw, 32px);
+    gap: clamp(16px, 1vw, 32px);
     padding-block: 0;
     background: transparent;
     z-index: 2;

@@ -40,7 +40,7 @@
     justify-content: space-between;
     align-items: flex-end;
     gap: 1rem;
-    padding-block: clamp(16px, 3vw, 32px);
+    padding-block: clamp(16px, 1vw, 32px);
   }
 
   .nav-title {
