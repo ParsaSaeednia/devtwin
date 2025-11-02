@@ -1,0 +1,124 @@
+.siteNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  background: transparent;
+  border-bottom: 2px dashed #212121;
+}
+
+.navInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  padding-block: clamp(16px, 1vw, 32px);
+}
+
+.navTitle {
+  font-size: clamp(24px, 6vw, 68px);
+  font-weight: 200;
+  line-height: 1.1;
+  color: #606060;
+  display: block;
+  transition: color 1s ease;
+}
+
+.navSub {
+  font-size: clamp(12px, 2.2vw, 16px);
+  font-weight: 300;
+  line-height: 1.2;
+  display: block;
+  transition: color 1s ease, padding-left 1s ease, opacity 0.4s ease;
+}
+
+.parhamContainer,
+.parsaContainer {
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.parhamContainer:hover .navTitle,
+.parhamContainer:hover .navSub,
+.parsaContainer:hover .navTitle,
+.parsaContainer:hover .navSub {
+  transition: 1s ease;
+  color: #212121;
+  cursor: pointer;
+}
+
+.parhamHoverLine,
+.parsaHoverLine {
+  position: relative;
+  padding-left: 0;
+  transition: color 1s ease, padding-left 1s ease;
+}
+
+.parhamHoverLine::before,
+.parsaHoverLine::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 8px;
+  width: 0%;
+  height: 2px;
+  background-color: #212121;
+  transition: width 1s ease;
+}
+
+.parhamContainer:hover .parhamHoverLine::before {
+  width: 55%;
+}
+
+.parhamContainer:hover .parhamHoverLine {
+  padding-left: 11.5em;
+}
+
+.parsaContainer:hover .parsaHoverLine::before {
+  width: 45%;
+}
+
+.parsaContainer:hover .parsaHoverLine {
+  padding-left: 7.1em;
+}
+
+.active .navTitle {
+  color: #212121;
+}
+
+.active .navSub {
+  opacity: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .parhamContainer:hover .navTitle,
+  .parhamContainer:hover .navSub,
+  .parsaContainer:hover .navTitle,
+  .parsaContainer:hover .navSub {
+    transition: none;
+    color: #212121;
+    cursor: pointer;
+  }
+
+  .parhamHoverLine,
+  .parsaHoverLine {
+    transition: none;
+  }
+
+  .parhamHoverLine::before,
+  .parsaHoverLine::before {
+    transition: none;
+  }
+
+  .parhamContainer:hover .parhamHoverLine::before,
+  .parsaContainer:hover .parsaHoverLine::before {
+    width: 0%;
+  }
+
+  .parhamContainer:hover .parhamHoverLine,
+  .parsaContainer:hover .parsaHoverLine {
+    padding-left: 0;
+  }
+}

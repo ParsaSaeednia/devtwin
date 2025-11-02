@@ -1,25 +1,47 @@
 # DevTwin
 
-DevTwin is a static portfolio site built using **Vue.js** and **Vite**, showcasing the work and profile of Parsa and Parham — one working with frontend (Vue) and the other with backend (NestJS).  
+DevTwin is a static portfolio hub for Parham and Parsa Saeednia. The site now runs on **Next.js 14.2.16** with the App Router to
+keep navigation fast while preserving the original motion design.
 
-Live Demo: [devtwin.ir](https://devtwin.ir/)  
+Live Demo: [devtwin.ir](https://devtwin.ir/)
 
 ## Tech Stack
 
-| Layer        | Technology                     |
-|---------------|-------------------------------|
-| Frontend      | Vue.js (CompositionApi) |
-| Bundler / Dev | Vite                           |
-| Styling       | Pure CSS |
-| Hosting        | Netlify |
+| Layer        | Technology            |
+|--------------|-----------------------|
+| Framework    | Next.js (App Router)  |
+| Runtime      | React 18              |
+| Animation    | Framer Motion         |
+| Styling      | Pure CSS              |
+| Hosting      | Vercel-friendly build |
+
 ---
+
 ## 🚀 Getting Started
 
-Clone the repository:
+Clone the repository and install dependencies:
 
 ```bash
 git clone https://github.com/your-username/devtwin.git
 cd devtwin
 npm install
-npm run dev
+```
 
+Run the development server:
+
+```bash
+npm run dev
+```
+
+Create a production build and start it locally:
+
+```bash
+npm run build
+npm start
+```
+
+Lint the project:
+
+```bash
+npm run lint
+```
