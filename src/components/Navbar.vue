@@ -31,7 +31,7 @@
     left: 0;
     width: 100%;
     z-index: 9;
-    background: transparent;
+    background: linear-gradient(to bottom, var(--paper-bg) 60%, transparent);
     border-bottom: 2px dashed #212121;
   }
 
@@ -43,12 +43,21 @@
     padding-block: clamp(16px, 1vw, 32px);
   }
 
+  /* Shared nav link styles */
+  .parham-container,
+  .parsa-container {
+    position: relative;
+    overflow: hidden;
+  }
+
   .nav-title {
     font-size: clamp(24px, 6vw, 68px);
     font-weight: 200;
     line-height: 1.1;
     color: #606060;
     display: block;
+    transition: color 0.5s cubic-bezier(0.22, 1, 0.36, 1), 
+                transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .nav-sub {
@@ -56,81 +65,72 @@
     font-weight: 300;
     line-height: 1.2;
     display: block;
-    transition: color 1s ease, padding-left 1s ease, opacity 0.4s ease;
-  }
-  .parham-container {
-    position: relative;
-    overflow: hidden;
+    color: #606060;
+    transition: color 0.5s cubic-bezier(0.22, 1, 0.36, 1), 
+                padding-left 0.6s cubic-bezier(0.22, 1, 0.36, 1), 
+                opacity 0.4s ease;
   }
 
+  /* Hover effects for Parham */
   .parham-container:hover .nav-title,
   .parham-container:hover .nav-sub {
-    transition: 1s ease;
     color: #212121;
     cursor: pointer;
   }
 
-  .parham-container .nav-title,
-  .parham-container .nav-sub {
-    transition: color 1s ease, padding-left 1s ease, opacity 0.4s ease;
+  .parham-container:hover .nav-title {
+    transform: translateX(4px);
   }
 
   .parham-hover-line {
     position: relative;
-    padding-left: 0em;
-    transition: color 1s ease, padding-left 1s ease;
+    padding-left: 0;
   }
 
   .parham-hover-line::before {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 8px;
+    bottom: 6px;
     width: 0%;
     height: 2px;
     background-color: #212121;
-    transition: width 1s ease;
+    transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .parham-container:hover .parham-hover-line::before {
-    width: 55%;
+    width: 50%;
   }
 
   .parham-container:hover .parham-hover-line {
-    padding-left: 11.5em;
-  }
-  .parsa-container {
-    position: relative;
-    overflow: hidden;
+    padding-left: clamp(4em, 12vw, 11.5em);
   }
 
+  /* Hover effects for Parsa */
   .parsa-container:hover .nav-title,
   .parsa-container:hover .nav-sub {
-    transition: 1s ease;
     color: #212121;
     cursor: pointer;
   }
 
-  .parsa-container .nav-title,
-  .parsa-container .nav-sub {
-    transition: color 1s ease, padding-left 1s ease, opacity 0.4s ease;
+  .parsa-container:hover .nav-title {
+    transform: translateX(-4px);
   }
 
   .parsa-hover-line {
     position: relative;
-    padding-left: 0em;
-    transition: color 1s ease, padding-left 1s ease;
+    padding-left: 0;
   }
 
   .parsa-hover-line::before {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 8px;
+    bottom: 6px;
     width: 0%;
     height: 2px;
     background-color: #212121;
-    transition: width 1s ease;
+    transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .parsa-container:hover .parsa-hover-line::before {
@@ -138,74 +138,53 @@
   }
 
   .parsa-container:hover .parsa-hover-line {
-    padding-left: 7.1em;
+    padding-left: clamp(3em, 8vw, 7.1em);
   }
 
+  /* Active state */
   .router-link-active .nav-title {
     color: #212121;
   }
 
   .router-link-active .nav-sub {
     opacity: 0;
+    pointer-events: none;
   }
 
+  /* Mobile - simplified interactions */
   @media screen and (max-width: 1024px) {
+    .nav-title,
+    .nav-sub {
+      transition: color 0.3s ease;
+    }
+
     .parham-container:hover .nav-title,
-    .parham-container:hover .nav-sub {
-      transition: none;
-      color: #212121;
-      cursor: pointer;
+    .parsa-container:hover .nav-title {
+      transform: none;
     }
 
-    .parham-container .nav-title,
-    .parham-container .nav-sub {
-      transition: none;
-    }
-
-    .parham-hover-line {
-      position: relative;
-      transition: none;
-    }
-
-    .parham-hover-line::before {
-      transition: none;
-    }
-
-    .parham-container:hover .parham-hover-line::before {
-      width: 0%;
-    }
-
-    .parham-container:hover .parham-hover-line {
-      padding-left: 0;
-    }
-
-    .parsa-container:hover .nav-title,
-    .parsa-container:hover .nav-sub {
-      transition: none;
-      color: #212121;
-      cursor: pointer;
-    }
-
-    .parsa-container .nav-title,
-    .parsa-container .nav-sub {
-      transition: none;
-    }
-
-    .parsa-hover-line {
-      position: relative;
-      transition: none;
-    }
-
+    .parham-hover-line::before,
     .parsa-hover-line::before {
-      transition: none;
+      display: none;
     }
 
-    .parsa-container:hover .parsa-hover-line::before {
-      width: 0%;
-    }
-
+    .parham-container:hover .parham-hover-line,
     .parsa-container:hover .parsa-hover-line {
       padding-left: 0;
+    }
+
+    .nav-sub {
+      font-size: clamp(10px, 2vw, 14px);
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .nav-title {
+      font-size: clamp(20px, 8vw, 32px);
+    }
+
+    .nav-sub {
+      display: none;
     }
   }
 </style>

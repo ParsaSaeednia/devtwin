@@ -1,7 +1,11 @@
 <template>
   <main class="container home">
     <h1 class="visually-hidden">DevTw.in – Parham & Parsa Saeednia</h1>
-    <p>We are <span>Backend</span> & <span>Frontend</span> Developers with Exprience developing web-based platforms</p>
+    <p class="animate-in">
+      We are <span class="highlight backend">Backend</span> & 
+      <span class="highlight frontend">Frontend</span> Developers 
+      with Experience developing web-based platforms
+    </p>
   </main>
 </template>
 
@@ -19,13 +23,66 @@
     font-size: clamp(18px, 2.2vw, 26px);
     font-style: normal;
     font-weight: 300;
+    line-height: 1.8;
+    max-width: 680px;
   }
 
-  span {
-    font-weight: bold;
+  /* Staggered entrance animation */
+  .animate-in {
+    animation: slideInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 0.15s;
+    opacity: 0;
   }
 
-  @media screen and (max-width: 1024px) {
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Highlighted text with underline animation */
+  .highlight {
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+  }
+
+  .highlight::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 0;
+    height: 2px;
+    background-color: #212121;
+    transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .highlight:hover::after {
+    width: 100%;
+  }
+
+  .backend {
+    animation: fadeHighlight 0.6s ease forwards;
+    animation-delay: 0.6s;
+    opacity: 0.7;
+  }
+
+  .frontend {
+    animation: fadeHighlight 0.6s ease forwards;
+    animation-delay: 0.75s;
+    opacity: 0.7;
+  }
+
+  @keyframes fadeHighlight {
+    to {
+      opacity: 1;
+    }
   }
 
   .visually-hidden {
