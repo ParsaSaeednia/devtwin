@@ -2,6 +2,8 @@
 	font-family: "Montserrat", sans-serif;
 	color: #212121;
 	--paper-bg: #f6f1e6;
+	--text-primary: #212121;
+	--text-secondary: #606060;
 	background-color: var(--paper-bg);
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -10,12 +12,20 @@
 	--container-max: 1200px;
 	--gutter: clamp(16px, 4vw, 48px);
 	--nav-space: clamp(72px, 12vh, 160px);
+	
+	/* Smooth easing curves */
+	--ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+	--ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 body {
@@ -35,11 +45,34 @@ body {
 	background-repeat: no-repeat, no-repeat, repeat, repeat;
 	background-size: 100% 60%, 100% 60%, auto, 200px 200px;
 	background-position: top center, bottom center, 0 0, 0 0;
+	background-attachment: fixed;
+	overflow-x: hidden;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+	
+	html {
+		scroll-behavior: auto;
+	}
 }
 
 a {
 	color: inherit;
 	text-decoration: inherit;
+	transition: opacity 0.2s ease;
+}
+
+a:focus-visible {
+	outline: 2px solid var(--text-primary);
+	outline-offset: 2px;
 }
 
 .container {
@@ -65,4 +98,21 @@ h3 {
 
 p {
 	line-height: 1.6;
+}
+
+/* Selection styling */
+::selection {
+	background-color: #212121;
+	color: var(--paper-bg);
+}
+
+/* Focus visible for keyboard navigation */
+:focus-visible {
+	outline: 2px solid var(--text-primary);
+	outline-offset: 2px;
+}
+
+/* Smooth bold transition helper */
+b, strong {
+	font-weight: 700;
 }
