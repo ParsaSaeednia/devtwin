@@ -22,11 +22,10 @@
         </div>
         <h3 class="animate-item" style="--delay: 8">Full CV:</h3>
         <a
-          href="../../ParsaSaeednia.pdf"
+          href="/Parsa-Saeednia.pdf"
           class="button animate-item"
           style="--delay: 9"
-          target="_blank"
-          rel="noopener"
+          download="Parsa-Saeednia.pdf"
           >Download</a
         >
       </section>
