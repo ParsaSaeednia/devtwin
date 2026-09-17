@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Profile from "../components/Profile.astro";
+
+const person = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Parsa Saeednia",
+  jobTitle: "Frontend Engineer",
+  url: "https://devtw.in/Parsa",
+  sameAs: [
+    "https://github.com/parsasaeednia",
+    "https://www.linkedin.com/in/parsa-saeednia-5a11a6174/",
+  ],
+};
+---
+
+<BaseLayout
+  title="Parsa Saeednia – Frontend Engineer | DevTw.in"
+  description="Frontend Engineer skilled in Vue.js, Next.js, TypeScript, and TailwindCSS."
+  canonical="https://devtw.in/Parsa"
+  person={person}
+>
+  <Profile
+    name="Parsa Saeednia"
+    role="Frontend Engineer"
+    side="right"
+    bioHtml={`Results-driven Frontend Engineer with a passion for crafting seamless user interfaces for <b>+4 years</b>. Proficient in
+      modern web technologies Such as <b>Vue.JS</b> & <b>ReactJS</b> to obtain the best looking platforms while maintaining
+      the fastest performance`}
+    technologies={["Vue.js", "Next.js", "Typescript", "TailwindCSS", "Git"]}
+    pdf="Parsa-Saeednia.pdf"
+    github="https://github.com/parsasaeednia"
+    linkedin="https://www.linkedin.com/in/parsa-saeednia-5a11a6174/"
+    email="p.parsa31@gmail.com"
+  />
+</BaseLayout>

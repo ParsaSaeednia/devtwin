@@ -116,3 +116,29 @@ p {
 b, strong {
 	font-weight: 700;
 }
+
+@keyframes page-slide-enter {
+	from {
+		opacity: 0;
+		transform: translateY(40px) scale(0.98);
+		filter: blur(4px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+		filter: blur(0);
+	}
+}
+
+@keyframes page-slide-leave {
+	from {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+		filter: blur(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(-20px) scale(0.98);
+		filter: blur(2px);
+	}
+}

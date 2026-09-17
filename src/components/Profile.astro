@@ -1,64 +1,68 @@
-<template>
-  <div>
-    <main class="container profile">
-      <h1 class="visually-hidden">Parsa Saeednia – Frontend Engineer</h1>
-      <section>
-        <router-link to="/" class="back-link animate-item" style="--delay: 0">
-          <span class="back-arrow">&larr;</span>
-          <span class="back-text">Back Home</span>
-        </router-link>
-        <p class="animate-item" style="--delay: 1">
-          Results-driven Frontend Engineer with a passion for crafting seamless user interfaces for <b>+4 years</b>. Proficient in
-          modern web technologies Such as <b>Vue.JS</b> & <b>ReactJS</b> to obtain the best looking platforms while maintaining
-          the fastest performance
-        </p>
-        <h3 class="animate-item" style="--delay: 2">Technologies:</h3>
-        <div class="tech-list">
-          <h6 class="animate-item" style="--delay: 3">Vue.js</h6>
-          <h6 class="animate-item" style="--delay: 4">Next.js</h6>
-          <h6 class="animate-item" style="--delay: 5">Typescript</h6>
-          <h6 class="animate-item" style="--delay: 6">TailwindCSS</h6>
-          <h6 class="animate-item" style="--delay: 7">Git</h6>
-        </div>
-        <h3 class="animate-item" style="--delay: 8">Full CV:</h3>
-        <a
-          href="/Parsa-Saeednia.pdf"
-          class="button animate-item"
-          style="--delay: 9"
-          download="Parsa-Saeednia.pdf"
-          >Download</a
-        >
-      </section>
-    </main>
-    <footer class="animate-footer">
-      <ul>
-        <a
-          href="https://github.com/parsasaeednia"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <li>Github</li>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/parsa-saeednia-5a11a6174/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <li>linkedin</li>
-        </a>
-        <a
-          href="mailto:p.parsa31@gmail.com"
-          target="_blank"
-          rel="noopener"
-        >
-          <li>mail</li>
-        </a>
-      </ul>
-    </footer>
-  </div>
-</template>
+---
+import { pageTransition } from "../lib/pageTransition.js";
 
-<style scoped>
+const {
+  name,
+  role,
+  side,
+  bioHtml,
+  technologies,
+  pdf,
+  github,
+  linkedin,
+  email,
+} = Astro.props;
+
+const isParsa = side === "right";
+const fullCvDelay = technologies.length + 3;
+const downloadDelay = fullCvDelay + 1;
+---
+
+<div class="profile-page" transition:name="page-content" transition:animate={pageTransition}>
+  <main class="container profile">
+    <h1 class="visually-hidden">{name} – {role}</h1>
+    <section class:list={{ "right-edge": isParsa, "left-edge": !isParsa }}>
+      <a href="/" class="back-link animate-item" style="--delay: 0">
+        <span class="back-arrow">&larr;</span>
+        <span class="back-text">Back Home</span>
+      </a>
+      <p class="animate-item" style="--delay: 1" set:html={bioHtml} />
+      <h3 class="animate-item" style="--delay: 2">Technologies:</h3>
+      <div class="tech-list">
+        {
+          technologies.map((technology, index) => (
+            <h6 class="animate-item" style={`--delay: ${index + 3}`}>
+              {technology}
+            </h6>
+          ))
+        }
+      </div>
+      <h3 class="animate-item" style={`--delay: ${fullCvDelay}`}>Full CV:</h3>
+      <a
+        href={`/${pdf}`}
+        class="button animate-item"
+        style={`--delay: ${downloadDelay}`}
+        download={pdf}
+        data-astro-reload
+      >Download</a>
+    </section>
+  </main>
+  <footer class:list={["animate-footer", { "parsa-footer": isParsa }]}>
+    <ul>
+      <a href={github} target="_blank" rel="noopener noreferrer">
+        <li>Github</li>
+      </a>
+      <a href={linkedin} target="_blank" rel="noopener noreferrer">
+        <li>linkedin</li>
+      </a>
+      <a href={`mailto:${email}`} target="_blank" rel="noopener">
+        <li>mail</li>
+      </a>
+    </ul>
+  </footer>
+</div>
+
+<style>
   div {
     position: relative;
   }
@@ -77,11 +81,18 @@
   section {
     display: flex;
     flex-direction: column;
+  }
+
+  .right-edge {
     border-right: 2px dashed #212121;
     padding-right: clamp(16px, 2vw, 40px);
   }
 
-  /* Staggered entrance animations */
+  .left-edge {
+    border-left: 2px dashed #212121;
+    padding-left: clamp(16px, 2vw, 40px);
+  }
+
   .animate-item {
     opacity: 0;
     transform: translateY(20px);
@@ -96,7 +107,6 @@
     }
   }
 
-  /* Back link styling */
   .back-link {
     display: inline-flex;
     align-items: center;
@@ -182,7 +192,6 @@
     transform: translateY(-50%) scale(1.5);
   }
 
-  /* Button with smooth hover */
   a.button {
     border: 1px solid #212121;
     padding: 10px 20px;
@@ -221,10 +230,13 @@
     transform: scale(0.97);
   }
 
-  /* Footer animations */
   .animate-footer {
     opacity: 0;
     animation: fadeIn 0.5s ease forwards;
+    animation-delay: 0.9s;
+  }
+
+  .parsa-footer {
     animation-delay: 1s;
   }
 
@@ -284,9 +296,10 @@
   }
 
   @media screen and (max-width: 1024px) {
-    section {
-      border-right: none;
-      padding-right: 0;
+    .right-edge,
+    .left-edge {
+      border: none;
+      padding-inline: 0;
     }
 
     p {
