@@ -1,15 +1,28 @@
-<template>
-  <main class="container home">
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { pageTransition } from "../lib/pageTransition.js";
+---
+
+<BaseLayout
+  title="DevTw.in – Home"
+  description="Parham & Parsa Saeednia – Backend and Frontend developers building performant web platforms."
+  canonical="https://devtw.in/"
+>
+  <main
+    class="container home"
+    transition:name="page-content"
+    transition:animate={pageTransition}
+  >
     <h1 class="visually-hidden">DevTw.in – Parham & Parsa Saeednia</h1>
     <p class="animate-in">
-      We are <span class="highlight backend">Backend</span> & 
-      <span class="highlight frontend">Frontend</span> Developers 
+      We are <span class="highlight backend">Backend</span> &
+      <span class="highlight frontend">Frontend</span> Developers
       with Experience developing web-based platforms
     </p>
   </main>
-</template>
+</BaseLayout>
 
-<style scoped>
+<style>
   .home {
     display: grid;
     min-height: 60vh;
@@ -27,7 +40,6 @@
     max-width: 680px;
   }
 
-  /* Staggered entrance animation */
   .animate-in {
     animation: slideInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     animation-delay: 0.15s;
@@ -45,7 +57,6 @@
     }
   }
 
-  /* Highlighted text with underline animation */
   .highlight {
     font-weight: 700;
     position: relative;

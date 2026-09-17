@@ -1,6 +1,6 @@
 # DevTwin
 
-DevTwin is a static portfolio site built using **Vue.js** and **Vite**, showcasing the work and profile of Parsa and Parham — one working with frontend (Vue) and the other with backend (NestJS).  
+DevTwin is a static portfolio site built using **Astro**, showcasing the work and profile of Parsa and Parham — one working with frontend and the other with backend (NestJS).
 
 Live Demo: [devtwin.ir](https://devtwin.ir/)  
 
@@ -8,8 +8,8 @@ Live Demo: [devtwin.ir](https://devtwin.ir/)
 
 | Layer        | Technology                     |
 |---------------|-------------------------------|
-| Frontend      | Vue.js (CompositionApi) |
-| Bundler / Dev | Vite                           |
+| Frontend      | Astro                          |
+| Bundler / Dev | Astro                          |
 | Styling       | Pure CSS |
 | Hosting        | Netlify |
 ---
@@ -22,4 +22,4 @@ git clone https://github.com/your-username/devtwin.git
 cd devtwin
 npm install
 npm run dev
-
+```

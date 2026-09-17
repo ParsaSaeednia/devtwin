@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Profile from "../components/Profile.astro";
+
+const person = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Parham Saeednia",
+  jobTitle: "Backend Engineer",
+  url: "https://devtw.in/Parham",
+  sameAs: [
+    "https://github.com/parhamsaeednia",
+    "https://www.linkedin.com/in/parham-saeednia-a88a30196/",
+  ],
+};
+---
+
+<BaseLayout
+  title="Parham Saeednia – Backend Engineer | DevTw.in"
+  description="Backend Engineer specialized in scalable architectures, Nest.js, Docker, and Microservices."
+  canonical="https://devtw.in/Parham"
+  person={person}
+>
+  <Profile
+    name="Parham Saeednia"
+    role="Backend Engineer"
+    side="left"
+    bioHtml={`Seasoned Backend Engineer adept at designing and implementing <b>scalable</b> server <b>architectures</b>. Skilled in
+      <b>Node JS</b>, database management, and <b>API development</b> to ensure optimal <b>performance</b> and reliability. A
+      results-oriented professional committed to delivering efficient backend solutions for complex applications.`}
+    technologies={["Nest.js", "Docker", "Git", "Microservices"]}
+    pdf="Parham-Saeednia.pdf"
+    github="https://github.com/parhamsaeednia"
+    linkedin="https://www.linkedin.com/in/parham-saeednia-a88a30196/"
+    email="saeedniaparham@gmail.com"
+  />
+</BaseLayout>
