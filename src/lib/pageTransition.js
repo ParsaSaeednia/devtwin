@@ -1,32 +1,19 @@
+const leave = {
+  name: "page-leave",
+  duration: "0.22s",
+  easing: "cubic-bezier(0.4, 0, 1, 1)",
+  fillMode: "both",
+};
+
+const enter = {
+  name: "page-enter",
+  delay: "0.1s",
+  duration: "0.45s",
+  easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+  fillMode: "both",
+};
+
 export const pageTransition = {
-  forwards: {
-    old: {
-      name: "page-slide-leave",
-      duration: "0.35s",
-      easing: "cubic-bezier(0.4, 0, 1, 1)",
-      fillMode: "both",
-    },
-    new: {
-      name: "page-slide-enter",
-      delay: "0.35s",
-      duration: "0.6s",
-      easing: "cubic-bezier(0.22, 1, 0.36, 1)",
-      fillMode: "both",
-    },
-  },
-  backwards: {
-    old: {
-      name: "page-slide-leave",
-      duration: "0.35s",
-      easing: "cubic-bezier(0.4, 0, 1, 1)",
-      fillMode: "both",
-    },
-    new: {
-      name: "page-slide-enter",
-      delay: "0.35s",
-      duration: "0.6s",
-      easing: "cubic-bezier(0.22, 1, 0.36, 1)",
-      fillMode: "both",
-    },
-  },
+  forwards: { old: leave, new: enter },
+  backwards: { old: leave, new: enter },
 };

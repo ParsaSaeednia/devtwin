@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { pageTransition } from "../lib/pageTransition.js";
 ---
 
 <BaseLayout
@@ -8,11 +7,7 @@ import { pageTransition } from "../lib/pageTransition.js";
   description="Parham & Parsa Saeednia – Backend and Frontend developers building performant web platforms."
   canonical="https://devtw.in/"
 >
-  <main
-    class="container home"
-    transition:name="page-content"
-    transition:animate={pageTransition}
-  >
+  <main class="container home">
     <h1 class="visually-hidden">DevTw.in – Parham & Parsa Saeednia</h1>
     <p class="animate-in">
       We are <span class="highlight backend">Backend</span> &

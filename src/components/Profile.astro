@@ -1,6 +1,4 @@
 ---
-import { pageTransition } from "../lib/pageTransition.js";
-
 const {
   name,
   role,
@@ -18,7 +16,7 @@ const fullCvDelay = technologies.length + 3;
 const downloadDelay = fullCvDelay + 1;
 ---
 
-<div class="profile-page" transition:name="page-content" transition:animate={pageTransition}>
+<div class="profile-page">
   <main class="container profile">
     <h1 class="visually-hidden">{name} – {role}</h1>
     <section class:list={{ "right-edge": isParsa, "left-edge": !isParsa }}>
@@ -50,13 +48,13 @@ const downloadDelay = fullCvDelay + 1;
   <footer class:list={["animate-footer", { "parsa-footer": isParsa }]}>
     <ul>
       <li>
-        <a href={github} target="_blank" rel="noopener noreferrer">Github</a>
+        <a href={github} target="_blank" rel="noopener noreferrer" data-label="Github">Github</a>
       </li>
       <li>
-        <a href={linkedin} target="_blank" rel="noopener noreferrer">linkedin</a>
+        <a href={linkedin} target="_blank" rel="noopener noreferrer" data-label="linkedin">linkedin</a>
       </li>
       <li>
-        <a href={`mailto:${email}`} target="_blank" rel="noopener">mail</a>
+        <a href={`mailto:${email}`} target="_blank" rel="noopener" data-label="mail">mail</a>
       </li>
     </ul>
   </footer>
@@ -198,7 +196,7 @@ const downloadDelay = fullCvDelay + 1;
     padding: 10px 20px;
     background-color: #fafafa;
     cursor: pointer;
-    font-family: "Montserrat", sans-serif;
+    font-family: inherit;
     text-transform: uppercase;
     width: fit-content;
     font-weight: 500;
@@ -273,7 +271,17 @@ const downloadDelay = fullCvDelay + 1;
     padding: 8px 20px;
     font-size: clamp(14px, 1.6vw, 16px);
     font-weight: 300;
+    text-align: center;
     transition: font-weight 0.2s ease, transform 0.2s ease;
+  }
+
+  footer a::after {
+    content: attr(data-label);
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    font-weight: 500;
   }
 
   footer li::after {
