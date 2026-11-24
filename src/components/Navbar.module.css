@@ -1,0 +1,133 @@
+.siteNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  background: linear-gradient(to bottom, var(--paper-bg) 60%, transparent);
+  border-bottom: 2px dashed #212121;
+}
+
+.navInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  padding-block: clamp(16px, 1vw, 32px);
+}
+
+.link {
+  position: relative;
+  overflow: hidden;
+}
+
+.parham {
+  --hover-shift: 4px;
+  --hover-line-width: 50%;
+  --hover-indent: clamp(4em, 12vw, 11.5em);
+}
+
+.parsa {
+  --hover-shift: -4px;
+  --hover-line-width: 45%;
+  --hover-indent: clamp(3em, 8vw, 7.1em);
+}
+
+.navTitle {
+  font-size: clamp(24px, 6vw, 68px);
+  font-weight: 200;
+  line-height: 1.1;
+  color: #606060;
+  display: block;
+  transition:
+    color 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.navSub {
+  font-size: clamp(12px, 2.2vw, 16px);
+  font-weight: 300;
+  line-height: 1.2;
+  display: block;
+  color: #606060;
+  transition:
+    color 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    padding-left 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.4s ease;
+}
+
+.link:hover .navTitle,
+.link:hover .navSub {
+  color: #212121;
+  cursor: pointer;
+}
+
+.link:hover .navTitle {
+  transform: translateX(var(--hover-shift));
+}
+
+.hoverLine {
+  position: relative;
+  padding-left: 0;
+}
+
+.hoverLine::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 6px;
+  width: 0%;
+  height: 2px;
+  background-color: #212121;
+  transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.link:hover .hoverLine::before {
+  width: var(--hover-line-width);
+}
+
+.link:hover .hoverLine {
+  padding-left: var(--hover-indent);
+}
+
+.isActive .navTitle {
+  color: #212121;
+}
+
+.isActive .navSub {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .navTitle,
+  .navSub {
+    transition: color 0.3s ease;
+  }
+
+  .link:hover .navTitle {
+    transform: none;
+  }
+
+  .hoverLine::before {
+    display: none;
+  }
+
+  .link:hover .hoverLine {
+    padding-left: 0;
+  }
+
+  .navSub {
+    font-size: clamp(10px, 2vw, 14px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navTitle {
+    font-size: clamp(20px, 8vw, 32px);
+  }
+
+  .navSub {
+    display: none;
+  }
+}
