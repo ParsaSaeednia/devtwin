@@ -1,4 +1,0 @@
-[build]
-  command = "npm run build"
-  # next.config.ts uses `output: "export"`, which writes the static site to `out/`
-  publish = "out"
