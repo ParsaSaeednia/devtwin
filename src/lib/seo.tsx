@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 
-export const siteUrl = "https://devtw.in";
-
-const shareTitle = "DevTw.in – Parham & Parsa Saeednia";
-const shareDescription = "Backend + Frontend devs crafting fast, clean web experiences.";
+export const siteUrl = new URL(process.env.SITE_URL || "https://devtw.in").origin;
+export const siteName = "DevTw.in";
 
 export function pageMetadata(path: string, title: string, description: string): Metadata {
   const url = siteUrl + path;
@@ -13,33 +11,22 @@ export function pageMetadata(path: string, title: string, description: string): 
     alternates: { canonical: url },
     openGraph: {
       type: "website",
-      siteName: "DevTw.in",
-      title: shareTitle,
-      description: shareDescription,
-      images: "/logo.jpg",
+      siteName,
+      title,
+      description,
+      images: [{ url: "/logo.jpg", width: 142, height: 141, alt: "DevTw.in logo" }],
       url,
     },
     twitter: {
-      card: "summary_large_image",
-      title: shareTitle,
-      description: shareDescription,
-      images: "/logo.jpg",
+      card: "summary",
+      title,
+      description,
+      images: [{ url: "/logo.jpg", alt: "DevTw.in logo" }],
     },
   };
 }
 
-export function JsonLd({ path, person }: { path: string; person?: object }) {
-  const organization = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "DevTw.in",
-    url: siteUrl + path,
-    logo: `${siteUrl}/logo.jpg`,
-  };
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }} />
-      {person && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person) }} />}
-    </>
-  );
+export function JsonLd({ data }: { data: { "@type": string } & Record<string, unknown> }) {
+  const json = JSON.stringify({ "@context": "https://schema.org", ...data }).replace(/</g, "\\u003c");
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: json }} />;
 }

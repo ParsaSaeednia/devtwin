@@ -4,6 +4,8 @@ DevTwin is a static portfolio site built using **Next.js** (static export), show
 
 Live Demo: [devtwin.ir](https://devtwin.ir/)  
 
+Set `SITE_URL` to the production origin at build time to use it across canonical URLs, social previews, and the sitemap. It defaults to `https://devtw.in`.
+
 ## Tech Stack
 
 | Layer        | Technology                     |

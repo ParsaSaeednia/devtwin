@@ -20,6 +20,7 @@ export function Navbar() {
             <Link
               key={href}
               href={href}
+              prefetch={false}
               className={`${styles.link} ${className} ${isActive ? styles.isActive : ""}`}
               aria-current={isActive ? "page" : undefined}
             >

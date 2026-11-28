@@ -1,14 +1,5 @@
-@font-face {
-	font-family: "Montserrat Fallback";
-	src: local("Arial"), local("ArialMT"), local("Liberation Sans");
-	size-adjust: 103.3%;
-	ascent-override: 93.7%;
-	descent-override: 24.3%;
-	line-gap-override: 0%;
-}
-
 :root {
-	font-family: var(--font-montserrat), "Montserrat Fallback", sans-serif;
+	font-family: var(--font-montserrat), Arial, sans-serif;
 	color: #212121;
 	--paper-bg: #f6f1e6;
 	--text-primary: #212121;
@@ -163,8 +154,6 @@ b, strong {
 	animation: page-leave 0.22s cubic-bezier(0.4, 0, 1, 1) both;
 }
 
-/* The page's own staggered entrance animations provide the motion,
-   so the incoming snapshot only fades in. */
 ::view-transition-new(page) {
 	animation: page-enter 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
 }
